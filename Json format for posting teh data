@@ -1,5 +1,26 @@
+Using Ajax:
+
 $.ajax({
-    type: 'POST',
+$.post("api/Employee",
+                    $("#EmployeeDetail").serialize(),
+  
     url: '/Controller/Action',
-    data: { 'EmployeeDetails':Index), 'FirstName':'LastName' }
+    data: { '(EmployeeDetails':Index), 'FirstName':'LastName' }
 });
+
+Using Javascript:
+
+<script type="text/javascript">
+$('#EmployeDetail').click(function()
+         {
+              $.post("api/Employee",
+                    $("#EmployeDetail").serialize(),
+                    function(value)
+                    {
+                         $('#EmploeeDeatils').append('<li>' +"Raj"."firstName" + '</li>');
+                           $('#EmploeeDeatils').append('<li>' +"Guru"."LastName" + '</li>');
+                    },
+                    "json"
+              );
+         });
+</script>
