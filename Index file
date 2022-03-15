@@ -1,0 +1,11 @@
+@WebApplication1.Models
+@{
+    ViewBag.Title = "Index";
+}
+<h3>Passing Data From Controller to View using ViewBag</h3>
+@{
+    var data = ViewBag.Message;
+
+}
+<<h3>FirstName:@data.FirstName</h3>
+ <h3>LastName:@data.FirstName</h3>
